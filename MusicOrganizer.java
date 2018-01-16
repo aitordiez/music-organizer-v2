@@ -171,6 +171,34 @@ public class MusicOrganizer
      }
      return index;
     }
+    
+    /**
+     * Escribir un método de modo que el número de archivos se determine una
+     * única vez y se almacene en una variable local antes de la ejecución del 
+     * bucle.Después, utilice en la condición del bucle la variable local, en 
+     * lugar de invocar size. Compruebe que esta versión proporciona los mismos 
+     * resultados. Si tiene problemas para completar este ejercicio, prueba a 
+     * utilizar el depurador para ver donde está fallando el programa.
+     */
+    public int findFirsts(String searchString){
+     int index=files.size();
+     //Indicar que vamos a seguir hasta encontrar una correspondencia
+     int contador=0;
+     boolean searching=true;
+     while(searching && contador < index){
+      String filename= files.get(contador);
+      if(filename.contains(searchString)){
+          searching= false;
+      }else{
+          contador++;
+      }
+     }
+     if (searching){
+          return -1;
+     }
+     return contador;
+    }
 }
+
     
     
