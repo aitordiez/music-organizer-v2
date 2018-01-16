@@ -134,6 +134,19 @@ public class MusicOrganizer
         
     }
     
+    /**
+     * Escriba un metodo en su version del proyecto que reproduzca muestras
+     * de todas las canciones de un artista en concreto, una después de otra.
+     */
+    public void playArtist(String search)
+    {
+        for(String filename: files){
+            if (filename.contains(search)){
+                player.playSample(filename);
+            }
+        }
+    }
+    
 }
     
     
