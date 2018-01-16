@@ -113,6 +113,27 @@ public class MusicOrganizer
           }
         }
     }
+    
+      /**
+     * Enumera unicamente los archivos que se corresponden con el criterio de
+     * búsqueda.Pruebe también el método con una cadena de búsqueda que no se 
+     * corresponda con ninguno de los nombres de archivo. ¿Llega a imprimirse
+     * algo en este caso?.
+     */
+    public void listMatchings(String searchString){
+        boolean nohayresultado= false;
+        for(String filename : files){
+            if(filename.contains(searchString)){
+                System.out.println(filename);
+                nohayresultado=true;
+            }
+        }
+        if(!nohayresultado){
+            System.out.println("Error: No se intenta buscar el texto");
+        }
+        
+    }
+    
 }
     
     
