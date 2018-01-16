@@ -88,6 +88,18 @@ public class MusicOrganizer
          System.out.println(filename);
      }
     }
+    
+    /**
+     * Imprimir todos los nombres de los archivos.
+     */
+    public void listAllFiles(){
+     int position=1;   
+     for(String filename: files){
+         System.out.println(position + "." + filename);
+         position++;
+     }
+    }
+    
 }
     
     
