@@ -147,6 +147,30 @@ public class MusicOrganizer
         }
     }
     
+    /**
+     * Localizar el índice del primer archivo que se corresponde con
+     * la cadena de búsqueda indicada.
+     * @param searchString la cadena que hay que buscar.
+     * @return El índice de la primera aparición, es decir -1 si
+     * no se encuentra ninguna correspondencia.
+     */
+    public int findFirst(String searchString){
+     int index=0;
+     //Indicar que vamos a seguir hasta encontrar una correspondencia
+     boolean searching=false;
+     while(!searching && index < files.size()){
+      String filename= files.get(index);
+      if(filename.contains(searchString)){
+          searching= true;
+      }else{
+          index++; 
+      }
+     }
+     if (!searching){
+         index = -1;
+     }
+     return index;
+    }
 }
     
     
