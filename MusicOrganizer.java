@@ -100,6 +100,19 @@ public class MusicOrganizer
      }
     }
     
+    /**
+     * Enumera los nombres de archivo que se corresponden con la 
+     * cadena de búsqueda proporcionada.
+     * @param searchString la cadena que hay que buscar.
+     */
+    public void listMatching(String searchString){
+        for(String filename : files){
+          if(filename.contains(searchString)){
+              //una coincidencia
+              System.out.println(filename);
+          }
+        }
+    }
 }
     
     
